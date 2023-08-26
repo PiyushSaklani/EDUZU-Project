@@ -46,10 +46,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size; //* To get the size of the screen
+    Size size = MediaQuery.of(context).size;
     double vicwInset = MediaQuery.of(context)
         .viewInsets
-        .bottom; //* To Know that keyboard is open or not
+        .bottom;
 
     if (!isLoaded) {
       return const Scaffold(
@@ -68,7 +68,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           children: [
             SizedBox(
-              // color: Colors.amber,
               height: 200,
               width: size.width,
               child: Column(
@@ -77,7 +76,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   Container(
                     alignment: Alignment.bottomRight,
-                    // color: Colors.blue,
                     height: 50,
                     width: 50,
                     child: IconButton(
@@ -96,7 +94,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                     alignment: Alignment.center,
-                    // color: Colors.red,
                     height: 150,
                     width: size.width,
                     child: const CircleAvatar(
@@ -110,13 +107,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             Container(
-              // color: Colors.blue,
               padding: const EdgeInsets.only(bottom: 5),
               alignment: Alignment.bottomCenter,
               height: 35,
               width: size.width,
               child: Text(
-                name ?? 'Sahej',
+                name ?? 'YourName',
                 style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -124,46 +120,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             Container(
-              // color: Colors.pink,
               alignment: Alignment.topCenter,
               height: 25,
               width: size.width,
               child: Text(
                 SupabaseManager.client.auth.currentUser?.email ??
-                    'sahej@gmail.com',
+                    'YourMail@gmail.com',
                 style: const TextStyle(fontSize: 14, color: Colors.white),
               ),
             ),
-            // Container(
-            //   // color: Colors.amber,
-            //   //? ^^
-            //   height: 12,
-            //   width: size.width,
-            //   padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //         color: Colors.black12,
-            //         borderRadius: BorderRadius.circular(20)),
-            //   ),
-            // ),
             Container(
               margin: const EdgeInsets.only(top: 30),
-              // color: Colors.pink,
-              //? ^^
               height: 460,
               width: size.width,
               child: Column(
                 children: [
                   ProfilePage_widget(
-                      inputone: "Name :", inputtwo: name?.toString() ?? 'Piyush'),
+                      inputone: "Name :", inputtwo: name?.toString() ?? 'YourName'),
                   ProfilePage_widget(
                       inputone: "CGPA :", inputtwo: cgpa?.toString() ?? '10'),
                   ProfilePage_widget(
                       inputone: "Year :", inputtwo: year?.toString() ?? '2021 - 2025'),
                   ProfilePage_widget(
                       inputone: "Degree :", inputtwo: degree?.toString() ?? 'B. Tech ECE'),
-                  // ProfilePage_widget(
-                  //     inputone: "Id :", inputtwo: cgpa?.toString() ?? '10'),
                   ProfilePage_widget(
                       inputone: "Current Semester :", inputtwo: currentsem?.toString() ?? '5'),
                   ProfilePage_widget(
