@@ -3,8 +3,7 @@ import 'dart:developer';
 import 'package:supabase/supabase.dart';
 
 const supabaseUrl = "https://rhgujhauazlzllyxhjur.supabase.co";
-const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJoZ3VqaGF1YXpsemxseXhoanVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTEyOTc1OTksImV4cCI6MTk2Njg3MzU5OX0.jIKLuHPhFClxW3ncILo3tuVzUQwfXQbeEr4VjoY85kk";
+const supabaseKey = " ";
 
 class SupabaseManager {
   static final client = SupabaseClient(supabaseUrl, supabaseKey);
