@@ -20,9 +20,3 @@ EDUZU has a simple and attractive user interface thanks to Flutter, and the rich
   <img src="assets/images/6.png" width="24%" />
   <img src="assets/images/7.png" width="24%" />
 </p>
-<p float="left">
-  <img src="assets/images/8.png" width="24%" />
-  <img src="assets/images/9.png" width="24%" /> 
-  <img src="assets/images/10.png" width="24%" />
-  <img src="assets/images/11.png" width="24%" />
-</p>
