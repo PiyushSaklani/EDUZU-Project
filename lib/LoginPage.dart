@@ -493,37 +493,32 @@ class _LoginPageState extends State<LoginPage> {
                               print("Email: " + _emailController.text);
                               print("Password: " + _passwordController.text);
 
-                              supabaseManager.getData();
+                              // supabaseManager.getData();
 
-                              try {
-                                await supabaseManager.signInUser(
-                                    _emailController.text,
-                                    _passwordController.text);
+                              // try {
+                              //   await supabaseManager.signInUser(
+                              //       _emailController.text,
+                              //       _passwordController.text);
 
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const MainScreen(),
-                                  ),
-                                );
-                              } catch (e) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text(
-                                        'Please enter valid email ID and password'),
-                                  ),
-                                );
-                                log('ERROR');
-                              }
+                                
+                              // } catch (e) {
+                              //   ScaffoldMessenger.of(context).showSnackBar(
+                              //     const SnackBar(
+                              //       content: Text(
+                              //           'Please enter valid email ID and password'),
+                              //     ),
+                              //   );
+                              //   log('ERROR');
+                              // }
 
                               log("Signed In");
 
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //     builder: (context) => const MainScreen(),
-                              //   ),
-                              // ),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MainScreen(),
+                                ),
+                              ),
                             },
                             child: const Text(
                               "Login",
