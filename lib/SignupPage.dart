@@ -506,54 +506,54 @@ class _SignupPageState extends State<SignupPage> {
                             print("Email: " + _emailController.text);
                             print("Password: " + _passwordController.text);
 
-                            if (_passwordController.text ==
-                                _passwordControllertwo.text) {
-                              try {
-                                supabaseManager.signUpUser(
-                                    _emailController.text,
-                                    _passwordController.text);
+                            // if (_passwordController.text ==
+                            //     _passwordControllertwo.text) {
+                            //   try {
+                            //     supabaseManager.signUpUser(
+                            //         _emailController.text,
+                            //         _passwordController.text);
 
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const LoginPage(),
-                                  ),
-                                );
+                            //     Navigator.push(
+                            //       context,
+                            //       MaterialPageRoute(
+                            //         builder: (context) => const LoginPage(),
+                            //       ),
+                            //     );
 
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('Sign Up Successful.'),
-                                  ),
-                                );
-                              } catch (e) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('Unable to Sign Up'),
-                                  ),
-                                );
-                                log('ERROR');
-                              }
-                            } else {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('Password does not match'),
-                                ),
-                              );
-                            }
+                            //     ScaffoldMessenger.of(context).showSnackBar(
+                            //       const SnackBar(
+                            //         content: Text('Sign Up Successful.'),
+                            //       ),
+                            //     );
+                            //   } catch (e) {
+                            //     ScaffoldMessenger.of(context).showSnackBar(
+                            //       const SnackBar(
+                            //         content: Text('Unable to Sign Up'),
+                            //       ),
+                            //     );
+                            //     log('ERROR');
+                            //   }
+                            // } else {
+                            //   ScaffoldMessenger.of(context).showSnackBar(
+                            //     const SnackBar(
+                            //       content: Text('Password does not match'),
+                            //     ),
+                            //   );
+                            // }
 
                             log("Signed In");
 
-                            // if (email.isNotEmpty && password.isNotEmpty)
-                            //   {
-                            //     await authenticationNotifier.signup(
-                            //         email:email,
-                            //         password:password)
-                            //   }
-                            // else
-                            //   {
-                            //     ScaffoldMessenger.of(context).showSnackBar(
-                            //         const SnackBar(content: Text("Fill It")))
-                            //   }
+                            if (email.isNotEmpty && password.isNotEmpty)
+                              {
+                                await authenticationNotifier.signup(
+                                    email:email,
+                                    password:password)
+                              }
+                            else
+                              {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text("Fill It")))
+                              }
                           },
                           child: const Text(
                             "Sign up",
